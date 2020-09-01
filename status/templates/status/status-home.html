@@ -1,0 +1,13 @@
+{% extends 'status/base.html' %}
+
+{% block content %}
+    <section>
+        <form action="country-cases" method="GET">
+            <input type="text" placeholder="Which country's status do you want to check?" name="country-name" />
+            <input type="submit" value="STATUS" />
+        </form>
+    </section>
+    <div class="message">
+        <p id="msg">STAY HOME, STAY SAFE</p>
+    </div>
+{% endblock content %}

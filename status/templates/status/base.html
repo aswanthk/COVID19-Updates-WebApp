@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'status/style.css' %}">
+    <title>Covid 19 (Live)</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <span><a href="{% url 'status-home' %}"><h2>COVID-19 Updates (Live)</h2></a></span>
+                <ul>
+                    <li><a href="{% url 'status-home' %}">Home</a></li>
+                    <li><a href="{% url 'status-cases-india' %}">India</a></li>
+                    <li><a href="{% url 'status-cases-world' %}">World</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block content %} {% endblock %}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'status/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h3>{{ country }}</h3>
+        <ul class="cases" id="desc">
+            <li>CORONAVIRUS CASES</li><br>
+            <li>DEATHS</li><br>
+            <li>RECOVERED</li><br>
+            <li>ACTIVE CASES</li><br>
+        </ul>
+        <ul class="cases" id="count">
+            {% for count in covid19_cases %}
+                <li>{{ count }}</li><br>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
